@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
 import ContactInformation from '../components/ContactInformation'
-import MessageForm from '../components/MessageForm'
+import ContactForm from '../components/ContactForm'
 import Map from '../components/Map'
 
 const Contact = () => {
@@ -13,7 +13,7 @@ const Contact = () => {
       <main>
         <Breadcrumb heading="Let’s Connect" />
         <ContactInformation />
-        <MessageForm />
+        <ContactForm />
         <Map />
       </main>
       <Footer/>

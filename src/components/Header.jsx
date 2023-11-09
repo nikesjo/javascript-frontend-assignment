@@ -30,7 +30,7 @@ const Header = () => {
             </nav>
           )}
         </div>
-        <Link to='/'><img className="logotype" src={Logo} alt="" /></Link>
+        <div className="logotype"><Link to='/'><img src={Logo} alt="" /></Link></div>
         <div className="contactinformation-bar">
             <div className="content-box">
                 <i className="fa-regular fa-phone-volume"></i>

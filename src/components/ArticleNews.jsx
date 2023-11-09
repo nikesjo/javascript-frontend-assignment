@@ -3,6 +3,7 @@ import image1 from '../assets/images/news-1.png'
 import image2 from '../assets/images/news-2.png'
 import image3 from '../assets/images/news-3.png'
 import SectionTitle from './Generics/SectionTitle'
+import Button from './Generics/Button'
 
 const ArticleNews = () => {
   return (
@@ -10,7 +11,7 @@ const ArticleNews = () => {
         <div className="container">
             <div className="content">
                 <SectionTitle title="Article & News" description="Get Every Single Articles & News" />
-                <a className="btn-transparent" href="#">Browse Articles <i className="fa-regular fa-arrow-up-right"></i></a>
+                <Button type="transparent" text="Browse Articles" url='/news' />
             </div>
             <div className="articles-and-news">
                 <a className="article" href="#">

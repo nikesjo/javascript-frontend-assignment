@@ -7,7 +7,8 @@ const NotFound = () => {
     <div className="wrapper">
       <main>
         <section className="notfound-section">
-          <h1>404 Sidan kunde inte hittas</h1>
+          <h1>Page Not Found!</h1>
+          <p>Unable to find the page that you are looking for.</p>
           <Button type="yellow" text="Go back to home page" url='/' />
         </section>
       </main>

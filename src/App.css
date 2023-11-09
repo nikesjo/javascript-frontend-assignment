@@ -386,7 +386,6 @@ header .container .menu .btn-login {
   flex-direction: column;
   align-items: center;
   border: 1.2px solid #cccccc;
-  border-radius: 10px;
 }
 @media (min-width: 1200px) {
   .features .container {
@@ -404,7 +403,7 @@ header .container .menu .btn-login {
   flex-direction: column;
   align-content: center;
   text-align: center;
-  padding-bottom: 20px;
+  flex: 1;
 }
 @media (min-width: 768px) {
   .features .container .title {
@@ -413,15 +412,22 @@ header .container .menu .btn-login {
 }
 @media (min-width: 1200px) {
   .features .container .title {
+    padding-right: 60px;
     padding-bottom: 200px;
+    padding-left: 80px;
     text-align: start;
   }
 }
+.features .container .title .section-title {
+  padding-bottom: 20px;
+}
 .features .container .title a {
+  align-self: center;
   text-align: center;
   width: 460px;
 }
 .features .container .information-article {
+  flex: 1.5;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -1281,15 +1287,29 @@ footer .copyright-section .container {
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
+  color: #B6B6BC;
+}
+@media (min-width: 1200px) {
+  footer .copyright-section .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 footer .copyright-section .container .social-media {
   margin-bottom: 20px;
   font-size: 1.5em;
 }
+@media (min-width: 1200px) {
+  footer .copyright-section .container .social-media {
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+  }
+}
 footer .copyright-section .container .social-media a {
   color: #FFFFFF;
   margin-left: 10px;
   margin-right: 10px;
+  transition: color 0.2s ease-in-out;
 }
 footer .copyright-section .container .social-media a:hover {
   color: #999999;
@@ -1415,52 +1435,57 @@ footer .copyright-section .container .social-media a:hover {
   margin-bottom: 0;
 }
 
-.message-form .container {
+.contact-form .container {
   background-color: #F0EFE9;
   padding: 60px 30px;
 }
 @media (min-width: 768px) {
-  .message-form .container {
+  .contact-form .container {
     padding: 70px 60px;
   }
 }
 @media (min-width: 992px) {
-  .message-form .container {
+  .contact-form .container {
     padding: 80px 100px;
   }
 }
 @media (min-width: 1200px) {
-  .message-form .container {
+  .contact-form .container {
     padding: 120px 170px 100px;
   }
 }
-.message-form .container h2 {
+.contact-form .container h2 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 35px;
   text-align: center;
 }
 @media (min-width: 768px) {
-  .message-form .container h2 {
+  .contact-form .container h2 {
     font-size: 45px;
   }
 }
 @media (min-width: 992px) {
-  .message-form .container h2 {
+  .contact-form .container h2 {
     margin: 0 150px;
   }
 }
 @media (min-width: 1200px) {
-  .message-form .container h2 {
+  .contact-form .container h2 {
     margin: 0 180px;
   }
 }
 @media (min-width: 1400px) {
-  .message-form .container h2 {
+  .contact-form .container h2 {
     margin: 0 280px;
   }
 }
-.message-form .container form .form-input {
+.contact-form .container form .errorMessage {
+  text-align: center;
+  margin-left: 20px;
+  color: #c93232;
+}
+.contact-form .container form .form-input {
   display: block;
   width: 100%;
   padding: 15px 30px;
@@ -1469,13 +1494,13 @@ footer .copyright-section .container .social-media a:hover {
   border-radius: 25px;
   outline: none;
 }
-.message-form .container form textarea {
+.contact-form .container form textarea {
   resize: none;
   height: 160px;
 }
-.message-form .container form input:focus,
-.message-form .container form textarea:focus {
-  border: 1px solid rgba(194, 193, 188, 0.6588235294);
+.contact-form .container form input:focus,
+.contact-form .container form textarea:focus {
+  outline: 1px solid rgba(194, 193, 188, 0.6588235294);
 }
 
 .map img {
@@ -1495,12 +1520,15 @@ footer .copyright-section .container .social-media a:hover {
   align-items: center;
   flex-direction: column;
   height: 100%;
+  padding: 200px 0;
 }
 .notfound-section h1 {
-  margin-top: 100px;
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
+}
+.notfound-section p {
+  font-weight: 500;
 }
 .notfound-section a {
   margin-top: 20px;
