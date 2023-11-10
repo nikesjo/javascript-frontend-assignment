@@ -5,17 +5,20 @@ import Contact from './views/Contact'
 import News from './views/News'
 import NewsDetails from './views/NewsDetails'
 import NotFound from './views/NotFound'
+import { ArticleProvider } from './contexts/ArticleContext'
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/contact' element={<Contact />} />
-      <Route path='/news' element={<News />} />
-      <Route path='/newsdetails' element={<NewsDetails />} />
-      <Route path='*' element={<NotFound />} />
-    </Routes>
+      <ArticleProvider>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/newsdetails/:id' element={<NewsDetails />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </ArticleProvider>
     </BrowserRouter>
   )
 }

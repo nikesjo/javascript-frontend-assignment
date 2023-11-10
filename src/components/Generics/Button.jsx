@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Button = ({type, url, text}) => {
   const getButtonClassName = () => {
@@ -13,10 +14,10 @@ const Button = ({type, url, text}) => {
   }
 
   return (
-    <a className={getButtonClassName()} href={url}>
+    <Link className={getButtonClassName()} to={url}>
         {text}
         <i className="fa-regular fa-arrow-up-right"></i>
-    </a>
+    </Link>
   )
 }
 

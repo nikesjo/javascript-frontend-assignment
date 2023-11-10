@@ -1,12 +1,16 @@
 import React from 'react'
 import SectionTitle from './Generics/SectionTitle'
+import ArticleList from './ArticleList'
+import Pagination from '../components/Generics/Pagination'
+
 
 const Blog = () => {
   return (
     <section className="blog">
         <div className="container">
             <SectionTitle description="Our News & Articles" />
-            <div>News från api</div>     
+            <ArticleList />
+            <Pagination />
         </div>
     </section>
   )

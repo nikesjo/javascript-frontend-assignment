@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
 import Blog from '../components/Blog'
 import Newsletter from '../components/Newsletter'
-import Pagination from '../components/Generics/Pagination'
+
 
 const News = () => {
   return (
@@ -13,7 +13,6 @@ const News = () => {
       <main>
         <Breadcrumb heading="News & Articles" />
         <Blog />
-        <Pagination />
         <Newsletter />
       </main>
       <Footer />

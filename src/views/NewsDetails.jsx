@@ -9,7 +9,7 @@ const NewsDetails = () => {
   return (
     <div className="wrapper">
       <Header />
-      <main>
+      <main className="news">
         <Breadcrumb heading="News & Articles" />
         <Details />
         <ArticleNews />
