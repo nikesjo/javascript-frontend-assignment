@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Button = ({type, url, text, icon}) => {
+const Button = ({type, url, text}) => {
   const getButtonClassName = () => {
     switch(type) {
       case 'yellow':
@@ -17,7 +17,6 @@ const Button = ({type, url, text, icon}) => {
     <Link className={getButtonClassName()} to={url}>
         {text}
         <i className="fa-regular fa-arrow-up-right"></i>
-        {icon}
     </Link>
   )
 }

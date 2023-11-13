@@ -14,7 +14,7 @@ const MeetOurTeam = () => {
         <div className="container">
             <div className="content">
                 <SectionTitle title="Meet Our Team" description="Experience Team Members" />
-                <Button type="transparent" text="Browse Team " url="/" />
+                <Button type="transparent" text="Browse Team " url="/team" />
             </div>
             <div className="team-pictures">
                 <Pictures className="pictures" image={image1} name="Kristine Palmer" description="Chef Operation Officer" />

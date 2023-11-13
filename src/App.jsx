@@ -6,11 +6,13 @@ import News from './views/News'
 import NewsDetails from './views/NewsDetails'
 import NotFound from './views/NotFound'
 import { ArticleProvider } from './contexts/ArticleContext'
+import AutoScrollToTop from './components/Generics/AutoScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
       <ArticleProvider>
+        <AutoScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />

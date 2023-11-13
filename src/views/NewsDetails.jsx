@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Breadcrumb from '../components/Breadcrumb'
+import Breadcrumb from '../components/Generics/Breadcrumb'
 import ArticleNews from '../components/ArticleNews/ArticleNews'
 import Details from '../components/Details'
 

@@ -32,7 +32,7 @@ const Testimonial = () => {
           />
         </div>
         <div className="center-content">
-          <Button type="black" text="All Reviews " url="/" />
+          <Button type="black" text="All Reviews " url="/reviews" />
         </div>
       </div>
     </section>
