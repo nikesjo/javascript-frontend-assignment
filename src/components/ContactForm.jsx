@@ -8,7 +8,7 @@ const ContactForm = () => {
 
     const form = useFormik({
         initialValues: {
-            name: '',
+            name: ' ',
             email: '',
             message: ''
         },
@@ -58,11 +58,11 @@ const ContactForm = () => {
                     <input className="form-input" type="text" id="name" name="name" value={form.values.name} onChange={form.handleChange} onBlur={form.handleBlur} title="Name" placeholder="Name*" tabIndex="1" />
                 </div>
                 <div className="mb-3">
-                <label className={(form.touched.email && form.errors.email) ? 'errorMessage' : ''}>{(form.touched.email && form.errors.email) ? form.errors.email : ''}</label>
+                    <label className={(form.touched.email && form.errors.email) ? 'errorMessage' : ''}>{(form.touched.email && form.errors.email) ? form.errors.email : ''}</label>
                     <input className="form-input" type="email" id="email" name="email" value={form.values.email} onChange={form.handleChange} onBlur={form.handleBlur} title="Email" placeholder="Email*" tabIndex="2" />
                 </div>
                 <div className="mb-5">
-                <label className={(form.touched.message && form.errors.message) ? 'errorMessage' : ''}>{(form.touched.message && form.errors.message) ? form.errors.message : ''}</label>
+                    <label className={(form.touched.message && form.errors.message) ? 'errorMessage' : ''}>{(form.touched.message && form.errors.message) ? form.errors.message : ''}</label>
                     <textarea className="form-input" id="message" name="message" value={form.values.message} onChange={form.handleChange} onBlur={form.handleBlur} title="Message" placeholder="Your Message*" tabIndex="3"></textarea>
                 </div>
 

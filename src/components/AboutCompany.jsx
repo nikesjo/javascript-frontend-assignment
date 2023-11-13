@@ -2,6 +2,8 @@ import React from 'react'
 import image from '../assets/images/about-company.png'
 import img_backgroundlines from '../assets/images/lines-picture.svg'
 import SectionTitle from './Generics/SectionTitle'
+import Button from './Generics/Button'
+import { Link } from 'react-router-dom'
 
 const AboutCompany = () => {
   return (
@@ -20,9 +22,9 @@ const AboutCompany = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci accusantium libero provident voluptate amet.</p>
                 </div>
                 <div className="buttons">
-                    <a className="btn-black" href="#">Learn More <i className="fa-regular fa-arrow-up-right"></i></a>
-                    <a className="btn-transparent" href="#"><i className="fa-sharp fa-solid fa-play"></i></a>
-                    <a className="intro-video" href="#">Intro Video</a>
+                    <Button type="black" text="Learn More " url="/" />
+                    <Link className="btn-transparent" to="/"><i className="fa-sharp fa-solid fa-play"></i></Link>
+                    <Link className="intro-video" to="/">Intro Video</Link>
                 </div>
             </div>
         </div>

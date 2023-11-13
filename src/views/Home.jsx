@@ -8,9 +8,9 @@ import Features from '../components/Features/Features'
 import AboutCompany from '../components/AboutCompany'
 import WhyChooseUs from '../components/WhyChooseUs/WhyChooseUs'
 import ProjectCaseStudies from '../components/ProjectCaseStudies/ProjectCaseStudies'
-import MeetOurTeam from '../components/MeetOurTeam'
-import Testimonial from '../components/Testimonial'
-import ArticleNews from '../components/ArticleNews'
+import MeetOurTeam from '../components/MeetOurTeam/MeetOurTeam'
+import Testimonial from '../components/Testimonial/Testimonial'
+import ArticleNews from '../components/ArticleNews/ArticleNews'
 import Newsletter from '../components/Newsletter'
 
 const Home = () => {

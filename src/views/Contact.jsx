@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Breadcrumb from '../components/Breadcrumb'
-import ContactInformation from '../components/ContactInformation'
+import ContactInformation from '../components/ContactInformation/ContactInformation'
 import ContactForm from '../components/ContactForm'
 import Map from '../components/Map'
 

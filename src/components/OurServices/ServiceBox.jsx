@@ -1,13 +1,12 @@
 import React from 'react'
 import Button from '../../components/Generics/Button'
 
-const ServiceBox = ({title, description, url}) => {
+const ServiceBox = ({title, description, icon}) => {
   return (
     <div className="service-box">
-        <div className="line"></div>
         <h4>{title}</h4>
         <p>{description}</p>
-        <Button type="black" className="btn-circle" href={url} />
+        <Button type="black" className="btn-circle" icon={<i className="fa-light fa-arrow-right"></i>} />
     </div>
   )
 }

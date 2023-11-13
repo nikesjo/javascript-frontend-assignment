@@ -1,9 +1,9 @@
 import React from 'react'
-import image1 from '../assets/images/news-1.png'
-import image2 from '../assets/images/news-2.png'
-import image3 from '../assets/images/news-3.png'
-import SectionTitle from './Generics/SectionTitle'
-import Button from './Generics/Button'
+import image1 from '../../assets/images/news-1.png'
+import image2 from '../../assets/images/news-2.png'
+import image3 from '../../assets/images/news-3.png'
+import SectionTitle from '../Generics/SectionTitle'
+import Button from '../Generics/Button'
 
 const ArticleNews = () => {
   return (

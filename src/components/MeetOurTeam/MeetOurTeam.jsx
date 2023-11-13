@@ -1,10 +1,12 @@
 import React from 'react'
-import image1 from '../assets/images/kristine-palmer.png'
-import image2 from '../assets/images/mark-aubri.png'
-import image3 from '../assets/images/kimberly-hansen.png'
-import image4 from '../assets/images/justin-willoman.png'
+import { Link } from 'react-router-dom'
+import image1 from '../../assets/images/kristine-palmer.png'
+import image2 from '../../assets/images/mark-aubri.png'
+import image3 from '../../assets/images/kimberly-hansen.png'
+import image4 from '../../assets/images/justin-willoman.png'
 import Pictures from './Pictures'
-import SectionTitle from './Generics/SectionTitle'
+import SectionTitle from '../Generics/SectionTitle'
+import Button from '../Generics/Button'
 
 const MeetOurTeam = () => {
   return (
@@ -12,7 +14,7 @@ const MeetOurTeam = () => {
         <div className="container">
             <div className="content">
                 <SectionTitle title="Meet Our Team" description="Experience Team Members" />
-                <a className="btn-transparent" href="#">Browse Team <i className="fa-regular fa-arrow-up-right"></i></a>
+                <Button type="transparent" text="Browse Team " url="/" />
             </div>
             <div className="team-pictures">
                 <Pictures className="pictures" image={image1} name="Kristine Palmer" description="Chef Operation Officer" />
@@ -21,11 +23,11 @@ const MeetOurTeam = () => {
                 <Pictures className="pictures" image={image4} name="Justin Willoman" description="Senior Tech Consultant" />
             </div>
             <div className="center-content">
-                <a href="#"><i className="fa-solid fa-circle"></i></a>
-                <a className="active" href="#"><i className="fa-solid fa-circle"></i></a>
-                <a href="#"><i className="fa-solid fa-circle"></i></a>
-                <a href="#"><i className="fa-solid fa-circle"></i></a>
-                <a href="#"><i className="fa-solid fa-circle"></i></a>
+                <Link to='/'><i className="fa-solid fa-circle"></i></Link>
+                <Link to='/' className="active"><i className="fa-solid fa-circle"></i></Link>
+                <Link to='/'><i className="fa-solid fa-circle"></i></Link>
+                <Link to='/'><i className="fa-solid fa-circle"></i></Link>
+                <Link to='/'><i className="fa-solid fa-circle"></i></Link>
             </div>
         </div>
     </section>
