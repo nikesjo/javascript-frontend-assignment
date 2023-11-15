@@ -1074,64 +1074,68 @@ header .container .menu .btn-login {
     margin-top: 140px;
   }
 }
-.article-and-news .container .articles-and-news {
+.article-and-news .container .articles-and-news .article {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 @media (min-width: 992px) {
-  .article-and-news .container .articles-and-news {
+  .article-and-news .container .articles-and-news .article {
     flex-direction: row;
   }
 }
-.article-and-news .container .articles-and-news .article {
+.article-and-news .container .articles-and-news .article .article-image {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  text-align: center;
-  color: #191919;
-  gap: 0.5rem;
 }
-@media (min-width: 1200px) {
-  .article-and-news .container .articles-and-news .article {
-    text-align: start;
-  }
+.article-and-news .container .articles-and-news .article .article-image img {
+  width: 420px;
+  height: 230px;
+  margin-bottom: 20px;
 }
-.article-and-news .container .articles-and-news .article .date-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #F9D783;
+.article-and-news .container .articles-and-news .article .article-image .orange-box {
   position: absolute;
-  top: 10px;
-  left: 10px;
   width: 56px;
   height: 64px;
+  background-color: #f9d783;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  top: 10px;
+  left: 10px;
 }
-.article-and-news .container .articles-and-news .article .date-box span {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
+.article-and-news .container .articles-and-news .article .article-image .orange-box .day {
+  font-family: "DM Sans";
   font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #191919;
+  position: absolute;
+  top: 5px;
 }
-.article-and-news .container .articles-and-news .article .date-box p {
-  color: #4c4c4c;
-  margin: 0;
+.article-and-news .container .articles-and-news .article .article-image .orange-box .month {
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #191919;
+  position: absolute;
+  bottom: 5px;
 }
-.article-and-news .container .articles-and-news .article img {
-  max-width: 100%;
+.article-and-news .container .articles-and-news .article a {
+  text-decoration: none;
 }
-.article-and-news .container .articles-and-news .article p {
-  color: #4c4c4c;
+.article-and-news .container .articles-and-news .article a p {
+  color: #4C4C4C;
 }
-.article-and-news .container .articles-and-news .article h3 {
+.article-and-news .container .articles-and-news .article a h3 {
   font-family: "DM Sans", sans-serif;
-  font-weight: 700;
   font-size: 22px;
+  font-weight: 700;
+  color: #191919;
 }
-.article-and-news .container .articles-and-news .article:hover {
+.article-and-news .container .articles-and-news .article a:hover {
   text-decoration: underline;
+  color: #191919;
 }
 .article-and-news .container .center-content {
   gap: 0.8rem;

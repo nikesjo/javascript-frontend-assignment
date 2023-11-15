@@ -12,8 +12,9 @@ export const ArticleProvider = ({children}) => {
         getArticles()
     }, [])
 
-    const getArticles = async () => {
-        const result = await fetch(apiUrl)
+    const getArticles = async (take = null) => {
+        const url = take ? `${apiUrl}?take=${take}` : apiUrl;
+        const result = await fetch(url)
         setArticles(await result.json())
     }
 
@@ -26,6 +27,7 @@ export const ArticleProvider = ({children}) => {
     const clearArticle = () => {
         setArticle(null)
     }
+
 
     return (
         <ArticleContext.Provider value={{articles, article, getArticles, getArticle, clearArticle}}>

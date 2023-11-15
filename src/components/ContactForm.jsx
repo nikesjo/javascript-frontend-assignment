@@ -8,7 +8,7 @@ const ContactForm = () => {
 
     const form = useFormik({
         initialValues: {
-            name: ' ',
+            name: '',
             email: '',
             message: ''
         },
