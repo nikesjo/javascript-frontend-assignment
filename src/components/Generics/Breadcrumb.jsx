@@ -5,7 +5,6 @@ import { Link, useLocation } from 'react-router-dom'
 const Breadcrumb = ({heading}) => {
   const location = useLocation()
 
-  // let currentLink = ""
   let currentLink = ""
 
   const crumbs = location.pathname.split('/')
