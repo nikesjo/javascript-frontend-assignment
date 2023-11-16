@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 
 const ContactForm = () => {
     const emailRegEx = new RegExp(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/)
+    const nameRegEx = new RegExp(/^[a-öA-Ö ]{2,30}$/)
     const [errorMessage, setErrorMessage] = useState('')
     const [messageSent, setMessageSent] = useState('')
 
@@ -17,7 +18,7 @@ const ContactForm = () => {
         validationSchema: Yup.object( {
             name: Yup.string()
                 .required("Name is required")
-                .min(2, "Name invalid, must have atleast 2 characters"),
+                .matches(nameRegEx, "Invalid name"),
             email: Yup.string()
                 .required("Email is required")
                 .matches(emailRegEx, "Please enter a valid email"),
@@ -38,9 +39,11 @@ const ContactForm = () => {
             switch (result.status) {
                 case 200:
                     setMessageSent('Thank you for your message!')
+                    console.log(result.status)
                     break;
                 case 400:
                     setErrorMessage('Something went wrong.')
+                    console.log(result.status)
                     break;
                 default:
                     console.log(result.status)
