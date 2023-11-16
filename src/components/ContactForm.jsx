@@ -5,6 +5,7 @@ import * as Yup from 'yup'
 const ContactForm = () => {
     const emailRegEx = new RegExp(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/)
     const [errorMessage, setErrorMessage] = useState('')
+    const [messageSent, setMessageSent] = useState('')
 
     const form = useFormik({
         initialValues: {
@@ -36,7 +37,7 @@ const ContactForm = () => {
 
             switch (result.status) {
                 case 200:
-                    alert('Message was sent!')
+                    setMessageSent('Thank you for your message!')
                     break;
                 case 400:
                     setErrorMessage('Something went wrong.')
@@ -52,7 +53,6 @@ const ContactForm = () => {
         <div className="container">
             <h2>Leave us a message for any information.</h2>
             <form id="contactForm" onSubmit={form.handleSubmit} noValidate>
-                <p className="errorMessage">{errorMessage}</p>
                 <div className="mb-3 mt-4">
                     <label className={(form.touched.name && form.errors.name) ? 'errorMessage' : ''}>{(form.touched.name && form.errors.name) ? form.errors.name : ''}</label>
                     <input className="form-input" type="text" id="name" name="name" value={form.values.name} onChange={form.handleChange} onBlur={form.handleBlur} title="Name" placeholder="Name*" tabIndex="1" />
@@ -65,7 +65,8 @@ const ContactForm = () => {
                     <label className={(form.touched.message && form.errors.message) ? 'errorMessage' : ''}>{(form.touched.message && form.errors.message) ? form.errors.message : ''}</label>
                     <textarea className="form-input" id="message" name="message" value={form.values.message} onChange={form.handleChange} onBlur={form.handleBlur} title="Message" placeholder="Your Message*" tabIndex="3"></textarea>
                 </div>
-
+                <p className="errorMessage">{errorMessage}</p>
+                <p className="messageSent">{messageSent}</p>
                 <div className="d-grid">
                     <button className="btn-yellow" type="submit">Send Message <i className="fa-regular fa-arrow-up-right"></i></button>
                 </div>

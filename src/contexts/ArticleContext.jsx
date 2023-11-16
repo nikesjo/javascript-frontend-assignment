@@ -7,14 +7,17 @@ export const ArticleProvider = ({children}) => {
     const apiUrl = "https://win23-assignment.azurewebsites.net/api/articles"
     const [articles, setArticles] = useState([])
     const [article, setArticle] = useState(null)
+    const [news, setNews] = useState([])
 
     useEffect(() => {
         getArticles()
+        getNews()
     }, [])
 
-    const getArticles = async (take = null) => {
-        const url = take ? `${apiUrl}?take=${take}` : apiUrl;
-        const result = await fetch(url)
+
+    
+    const getArticles = async () => {
+        const result = await fetch(apiUrl)
         setArticles(await result.json())
     }
 
@@ -28,9 +31,14 @@ export const ArticleProvider = ({children}) => {
         setArticle(null)
     }
 
+    const getNews = async () => {
+        const result = await fetch(`${apiUrl}?take=3`)
+        const data = await result.json()
+        setNews(data)
+    }
 
     return (
-        <ArticleContext.Provider value={{articles, article, getArticles, getArticle, clearArticle}}>
+        <ArticleContext.Provider value={{articles, article, news, getArticles, getArticle, clearArticle, getNews}}>
             {children}
         </ArticleContext.Provider>
     )
