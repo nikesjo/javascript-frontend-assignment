@@ -11,7 +11,7 @@ const Contact = () => {
     <div className="wrapper">
       <Header />
       <main>
-        <Breadcrumb heading="Let’s Connect" />
+        <Breadcrumb type='contact' heading="Let’s Connect" />
         <ContactInformation />
         <ContactForm />
         <Map />
