@@ -13,13 +13,13 @@ const ProjectCaseStudies = () => {
         <div className="container">
             <SectionTitle title="Project & Case Studies" description="Let´s Looks Our Global Projects" />
             <div className="project-and-cases">
-                <Project image={image1} alt="A mans hans reading a business paper" title="Grow your business"  />
-                <Project image={image2} alt="Pink Apple products on a desk" title="Why your client needs a responsive website" />
-                <Project image={image3} alt="Desk with office supplies" title="Educate your employees to get better results" />
-                <Project image={image4} alt="Laptop with Business Intelligence Insights" title="Business Insights is a important piece of your business" />
+                <Project image={image1} alt="A mans hans reading a business paper" title="Grow your business" url="/project"  />
+                <Project image={image2} alt="Pink Apple products on a desk" title="Why your client needs a responsive website" url="/project" />
+                <Project image={image3} alt="Desk with office supplies" title="Educate your employees to get better results" url="/project" />
+                <Project image={image4} alt="Laptop with Business Intelligence Insights" title="Business Insights is a important piece of your business" url="/project" />
             </div>
             <div className="center-content">
-                <Button type="black" url="/" text="All Recent Projects " />
+                <Button type="black" url="/projects" text="All Recent Projects " />
             </div>
         </div>
     </section>

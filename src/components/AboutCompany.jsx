@@ -22,9 +22,9 @@ const AboutCompany = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci accusantium libero provident voluptate amet.</p>
                 </div>
                 <div className="buttons">
-                    <Button type="black" text="Learn More " url="/" />
-                    <Link className="btn-transparent" to="/"><i className="fa-sharp fa-solid fa-play"></i></Link>
-                    <Link className="intro-video" to="/">Intro Video</Link>
+                    <Button type="black" text="Learn More " url="/services/about" />
+                    <Link className="btn-transparent" to="/video"><i className="fa-sharp fa-solid fa-play"></i></Link>
+                    <Link className="intro-video" to="/video">Intro Video</Link>
                 </div>
             </div>
         </div>
