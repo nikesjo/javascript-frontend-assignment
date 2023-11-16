@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import SectionTitle from './Generics/SectionTitle'
+import SectionTitle from '../Generics/SectionTitle'
 import Posts from './Posts'
-import { useArticles } from '../contexts/ArticleContext'
+import { useArticles } from '../../contexts/ArticleContext'
 import { Link, useParams } from 'react-router-dom'
 
 const Details = () => {

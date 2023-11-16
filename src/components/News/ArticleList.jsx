@@ -1,5 +1,5 @@
 import React from 'react'
-import { useArticles } from '../contexts/ArticleContext'
+import { useArticles } from '../../contexts/ArticleContext'
 import { Link } from 'react-router-dom'
 
 const ArticleList = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
-import SectionTitle from './Generics/SectionTitle'
+import SectionTitle from '../Generics/SectionTitle'
 import ArticleList from './ArticleList'
-import Pagination from '../components/Generics/Pagination'
+import Pagination from './Pagination'
 
 
 const Blog = () => {

@@ -13,8 +13,6 @@ export const ArticleProvider = ({children}) => {
         getArticles()
         getNews()
     }, [])
-
-
     
     const getArticles = async () => {
         const result = await fetch(apiUrl)
