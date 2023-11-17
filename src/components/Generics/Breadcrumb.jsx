@@ -20,7 +20,7 @@ const Breadcrumb = ({type, heading}) => {
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadbrumb-item"><Link to="/">Home</Link></li>
-                    <li className="breadbrumb-item active" aria-current="page">{page()}</li>
+                    <li className="breadbrumb-item active" aria-current="page"><Link to='/news'>{page()}</Link></li>
                 </ol>
             </nav>
             <h1>{heading}</h1>

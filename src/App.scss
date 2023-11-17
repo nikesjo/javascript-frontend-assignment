@@ -1167,35 +1167,27 @@ header {
 
         .articles-and-news {          
             .articles {
-                display: flex;
-                flex-direction: column;
-                gap: 3rem;
-    
-                @media (min-width: 992px) {
-                    flex-direction: row;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                @media (min-width: 768px) {
+                    grid-template-columns: 1fr 1fr;
                 }
-                
-                .article {
-                    display: flex;
-                    flex-direction: column;
-                    text-decoration: none;
-                    text-align: center;
-                    color: #191919;
-                    gap: 0.5rem;
-    
-                    @media (min-width: 1200px) {
-                        text-align: start;
-                    }
-    
+                @media (min-width: 1200px) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                .article {   
                     .article-image {
                         position: relative;
                         
                         img {
-                            width:  420px;
+                            width: 100%;
                             height: 230px;
                             margin-bottom: 20px;
+                            object-fit: cover;
                         }
-        
+
                         .orange-box {
                             position: absolute;
                             width: 56px;
@@ -1230,25 +1222,25 @@ header {
                             }
                         }
                     }
+                }
+                
+                a {
+                    text-decoration: none;
     
-                    a {
-                        text-decoration: none;
+                    p {
+                        color: #4C4C4C;
+                    }
         
-                        p {
-                            color: #4C4C4C;
-                        }
-            
-                        h3 {
-                            font-family: 'DM Sans', sans-serif;
-                            font-size: 22px;
-                            font-weight: 700;
-                            color: #191919;
-                        }
-    
-                        &:hover {
-                            text-decoration: underline;
-                            color: #191919;
-                        }
+                    h3 {
+                        font-family: 'DM Sans', sans-serif;
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: #191919;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: #191919;
                     }
                 }
             }
@@ -1685,56 +1677,72 @@ footer {
     .container{
         .section-title {
             padding-bottom: 30px;
+            text-align: center;
+
+            @media (min-width: 1200px) {
+                text-align: start;
+            }
         }
 
         .articles {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 20px;
 
-            .article-image {
-                position: relative;
-                
-                img {
-                    width:  420px;
-                    height: 230px;
-                    margin-bottom: 20px;
-                }
-
-                .orange-box {
-                    position: absolute;
-                    width: 56px;
-                    height: 64px;
-                    background-color: #f9d783;
-                    display: flex;
-                    flex-direction: column;
-
-                    align-items: center;
-                    text-align: center;
-                    top: 10px;
-                    left: 10px;
-
-                    .day {
-                        font-family: "DM Sans";
-                        font-size: 22px;
-                        font-weight: bold;
-
-                        text-align: center;
-                        color: #191919;
-                        position: absolute;
-                        top: 5px;
-                    }
-
-                    .month {
-                        font-weight: normal;
-                        font-style: normal;
-                        text-align: center;
-                        color: #191919;
-                        position: absolute;
-                        bottom: 5px;
-                    }
-                }
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
             }
+
+            @media (min-width: 1200px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .article {
+                .article-image {
+                    position: relative;
+                    
+                    img {
+                        width: 100%;
+                        height: 230px;
+                        margin-bottom: 20px;
+                        object-fit: cover;
+                    }
+        
+                    .orange-box {
+                        position: absolute;
+                        width: 56px;
+                        height: 64px;
+                        background-color: #f9d783;
+                        display: flex;
+                        flex-direction: column;
+        
+                        align-items: center;
+                        text-align: center;
+                        top: 10px;
+                        left: 10px;
+        
+                        .day {
+                            font-family: "DM Sans";
+                            font-size: 22px;
+                            font-weight: bold;
+        
+                            text-align: center;
+                            color: #191919;
+                            position: absolute;
+                            top: 5px;
+                        }
+        
+                        .month {
+                            font-weight: normal;
+                            font-style: normal;
+                            text-align: center;
+                            color: #191919;
+                            position: absolute;
+                            bottom: 5px;
+                        }
+                    }
+                }
+            }  
 
             a {
                 text-decoration: none;
@@ -1881,7 +1889,6 @@ footer {
                         border-radius: 25px;
                         outline: none;
                         border: 1px solid #F0EFE9;
-                        margin-right: 20px;
         
                         &:focus {
                             border: 1px solid #c2c1bca8;
@@ -1893,7 +1900,7 @@ footer {
                     border: 1px solid #CCCCCC;
                     padding: 40px 30px;
                     position: relative;
-
+                    
                     h3 {
                         font-family: 'DM Sans', sans-serif;
                         font-size: 22px;
@@ -1911,13 +1918,15 @@ footer {
                     }
 
                     .post {
-                        border-bottom: 1px solid #D8D8D8;
-                        padding: 15px 0;
+                        color: #191919;
+                        text-decoration: none;
 
                         h4 {
                             font-family: 'DM Sans', sans-serif;
                             font-size: 16px;
                             font-weight: 700;
+                            padding-top: 15px;
+                            border-top: 1px solid #D8D8D8;
                         }
 
                         span {

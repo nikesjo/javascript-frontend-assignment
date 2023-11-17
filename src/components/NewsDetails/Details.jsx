@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import SectionTitle from '../Generics/SectionTitle'
 import Posts from './Posts'
 import { useArticles } from '../../contexts/ArticleContext'
@@ -12,8 +12,8 @@ const Details = () => {
     getArticle(id)
     
     return () => clearArticle()
-  }, [])
-
+  }, [id])
+  
   return (
     <section className="news-details">
       <div className="container">
@@ -79,7 +79,7 @@ const Details = () => {
             <div className="right-side">
               <form id="searchBox" method="post">
                 <i className="fa-regular fa-magnifying-glass"></i>
-                <input className="form-input" type="search" id="search" name="search" title="Search" placeholder="Type to search..." tabIndex="1" />
+                <div className="d-grid"><input className="form-input" type="search" id="search" name="search" title="Search" placeholder="Type to search..." tabIndex="1" /></div>
               </form>
               <div className="recent-posts">
                 <h3>Recent Posts</h3>

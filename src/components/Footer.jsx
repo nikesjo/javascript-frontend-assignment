@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/images/logotype-footer.svg'
+import FooterNav from './FooterNav'
 
 const Footer = () => {
   return (
@@ -15,42 +16,10 @@ const Footer = () => {
               nam ratione minus necessitatibus, iure praesentium.
             </p>
           </div>
-          <nav>
-            <h4>Company</h4>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">Career</a></li>
-            </ul>
-          </nav>
-          <nav>
-            <h4>Help</h4>
-            <ul>
-                <li><a href="#">Customer Support</a></li>
-                <li><a href="#">Delivery Details</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </nav>
-          <nav>
-            <h4>Resources</h4>
-            <ul>
-                <li><a href="#">Free eBooks</a></li>
-                <li><a href="#">Development Tutorial</a></li>
-                <li><a href="#">How to - Blog</a></li>
-                <li><a href="#">Youtube Playlist</a></li>
-            </ul>
-          </nav>
-          <nav>
-            <h4>Link</h4>
-            <ul>
-                <li><a href="#">Free eBooks</a></li>
-                <li><a href="#">Development Tutorial</a></li>
-                <li><a href="#">How to - Blog</a></li>
-                <li><a href="#">Youtube Playlist</a></li>
-            </ul>
-          </nav>
+          <FooterNav url="/" title="Company" link1="About" link2="Features" link3="Works" link4="Career" />
+          <FooterNav url="/" title="Help" link1="Customer Support" link2="Delivery Details" link3="Terms & Conditions" link4="Privacy Policy" />
+          <FooterNav url="/" title="Resources" link1="Free eBooks" link2="Development Tutorial" link3="How to - Blog" link4="Youtube Playlist" />
+          <FooterNav url="/" title="Link" link1="Free eBooks" link2="Development Tutorial" link3="How to - Blog" link4="Youtube Playlist" />
         </div>
       </section>
       <section className="copyright-section">

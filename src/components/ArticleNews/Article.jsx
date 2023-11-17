@@ -6,25 +6,25 @@ const Article = () => {
     const { news } = useArticles()
   return (
     <div className="articles">
-    {
-        news.map(article => (
-            <div key={article.id}>
-                <Link to={`/newsdetails/${article.id}`} className="article">
-                    <div className="article-image">
-                        <img src={article.imageUrl} />
-                        <div className="orange-box">
-                            <div className="day">{new Date(article.published).getDate()}</div>
-                            <div className="month">{new Date(article.published).toLocaleString('default', { month: 'short' })}</div>
+        {
+            news.map(article => (
+                <div key={article.id}>
+                    <Link to={`/newsdetails/${article.id}`} className="article">
+                        <div className="article-image">
+                            <img src={article.imageUrl} />
+                            <div className="orange-box">
+                                <div className="day">{new Date(article.published).getDate()}</div>
+                                <div className="month">{new Date(article.published).toLocaleString('default', { month: 'short' })}</div>
+                            </div>
                         </div>
-                    </div>
-                    <p>{article.category}</p>
-                    <h3>{article.title}</h3>
-                    <p>{article.content}</p>
-                </Link>
-            </div>
-        ))
-    }
-</div> 
+                        <p>{article.category}</p>
+                        <h3>{article.title}</h3>
+                        <p>{article.content}</p>
+                    </Link>
+                </div>
+            ))
+        }
+    </div> 
   )
 }
 

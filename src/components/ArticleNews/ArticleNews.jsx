@@ -2,7 +2,6 @@ import React from 'react'
 import SectionTitle from '../Generics/SectionTitle'
 import Button from '../Generics/Button'
 import { Link } from 'react-router-dom'
-
 import Article from './Article'
 
 const ArticleNews = () => {

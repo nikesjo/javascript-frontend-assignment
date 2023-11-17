@@ -1075,35 +1075,29 @@ header .container .menu .btn-login {
   }
 }
 .article-and-news .container .articles-and-news .articles {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .article-and-news .container .articles-and-news .articles {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
   }
 }
-.article-and-news .container .articles-and-news .articles .article {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  text-align: center;
-  color: #191919;
-  gap: 0.5rem;
-}
 @media (min-width: 1200px) {
-  .article-and-news .container .articles-and-news .articles .article {
-    text-align: start;
+  .article-and-news .container .articles-and-news .articles {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 .article-and-news .container .articles-and-news .articles .article .article-image {
   position: relative;
 }
 .article-and-news .container .articles-and-news .articles .article .article-image img {
-  width: 420px;
+  width: 100%;
   height: 230px;
   margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .article-and-news .container .articles-and-news .articles .article .article-image .orange-box {
   position: absolute;
@@ -1134,19 +1128,19 @@ header .container .menu .btn-login {
   position: absolute;
   bottom: 5px;
 }
-.article-and-news .container .articles-and-news .articles .article a {
+.article-and-news .container .articles-and-news .articles a {
   text-decoration: none;
 }
-.article-and-news .container .articles-and-news .articles .article a p {
+.article-and-news .container .articles-and-news .articles a p {
   color: #4C4C4C;
 }
-.article-and-news .container .articles-and-news .articles .article a h3 {
+.article-and-news .container .articles-and-news .articles a h3 {
   font-family: "DM Sans", sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: #191919;
 }
-.article-and-news .container .articles-and-news .articles .article a:hover {
+.article-and-news .container .articles-and-news .articles a:hover {
   text-decoration: underline;
   color: #191919;
 }
@@ -1540,21 +1534,39 @@ footer .copyright-section .container .social-media a:hover {
 
 .blog .container .section-title {
   padding-bottom: 30px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .blog .container .section-title {
+    text-align: start;
+  }
 }
 .blog .container .articles {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
-.blog .container .articles .article-image {
+@media (min-width: 768px) {
+  .blog .container .articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .blog .container .articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.blog .container .articles .article .article-image {
   position: relative;
 }
-.blog .container .articles .article-image img {
-  width: 420px;
+.blog .container .articles .article .article-image img {
+  width: 100%;
   height: 230px;
   margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.blog .container .articles .article-image .orange-box {
+.blog .container .articles .article .article-image .orange-box {
   position: absolute;
   width: 56px;
   height: 64px;
@@ -1566,7 +1578,7 @@ footer .copyright-section .container .social-media a:hover {
   top: 10px;
   left: 10px;
 }
-.blog .container .articles .article-image .orange-box .day {
+.blog .container .articles .article .article-image .orange-box .day {
   font-family: "DM Sans";
   font-size: 22px;
   font-weight: bold;
@@ -1575,7 +1587,7 @@ footer .copyright-section .container .social-media a:hover {
   position: absolute;
   top: 5px;
 }
-.blog .container .articles .article-image .orange-box .month {
+.blog .container .articles .article .article-image .orange-box .month {
   font-weight: normal;
   font-style: normal;
   text-align: center;
@@ -1700,7 +1712,6 @@ footer .copyright-section .container .social-media a:hover {
   border-radius: 25px;
   outline: none;
   border: 1px solid #F0EFE9;
-  margin-right: 20px;
 }
 .news-details .container .content .right-side form .form-input:focus {
   border: 1px solid rgba(194, 193, 188, 0.6588235294);
@@ -1725,13 +1736,15 @@ footer .copyright-section .container .social-media a:hover {
   background-color: #191919;
 }
 .news-details .container .content .right-side .recent-posts .post {
-  border-bottom: 1px solid #D8D8D8;
-  padding: 15px 0;
+  color: #191919;
+  text-decoration: none;
 }
 .news-details .container .content .right-side .recent-posts .post h4 {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
+  padding-top: 15px;
+  border-top: 1px solid #D8D8D8;
 }
 .news-details .container .content .right-side .recent-posts .post span {
   font-size: 14px;

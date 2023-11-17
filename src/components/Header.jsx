@@ -60,7 +60,7 @@ const Header = () => {
               <li><NavLink to='/contact'>Contact</NavLink></li>
             </ul>
           </nav>
-          <Button type="yellow" text="Login" url='/' />
+          <Button type="yellow" text="Login" url='/login' />
         </div>
     </div>
     </header>
